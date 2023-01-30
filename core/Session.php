@@ -81,6 +81,23 @@ class Session
         unset($_SESSION[$key]);
     }
 
+    public static function createCsrfToken()
+    {
+        $token = bin2hex(random_bytes(12));
+        self::set('_token', $token);
+        return $token;
+    }
+
+    public static function csrfCheck()
+    {
+        $request = new Request();
+        $check = $request->post('_token');
+        if (self::exists('_token') && self::get('_token') == $check) {
+            return true;
+        }
+        Application::$app->response->redirect('errors/403');
+    }
+
     public function __destruct()
     {
         /** Iterate over Mark to be removed. */
