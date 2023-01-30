@@ -19,6 +19,9 @@
         "filp/whoops": "^2.14",
         "monolog/monolog": "^3.2",
         "vlucas/phpdotenv": "^5.5",
-        "google/apiclient": "^2.13"
+        "google/apiclient": "^2.13",
+        "symfony/var-dumper": "^6.2",
+        "erusev/parsedown": "^1.7",
+        "symfony/http-foundation": "^6.2"
     }
 }

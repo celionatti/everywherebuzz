@@ -1,0 +1,1 @@
+<h1 class="text-danger">Welcome Mr . <?= $name; ?></h1>
