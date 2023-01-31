@@ -15,8 +15,8 @@ class Form
         $inputAttrs = self::processAttrs($inputAttrs);
         $errorMsg = array_key_exists($id, $errors) ? $errors[$id] : "";
         $html = "<div {$wrapperStr}>";
-        $html .= "<input id='{$id}' name='{$id}' value='{$value}' {$inputAttrs} placeholder='{$label}' />";
         $html .= "<label for='{$id}'>{$label}</label>";
+        $html .= "<input id='{$id}' name='{$id}' value='{$value}' {$inputAttrs} placeholder='{$label}' />";
         $html .= "<div class='invalid-feedback'>{$errorMsg}</div></div>";
         return $html;
     }
