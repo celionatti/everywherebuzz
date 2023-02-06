@@ -81,18 +81,18 @@ class Session
         unset($_SESSION[$key]);
     }
 
-    public static function createCsrfToken()
+    public function createCsrfToken()
     {
         $token = bin2hex(random_bytes(12));
-        self::set('_token', $token);
+        $this->set('_token', $token);
         return $token;
     }
 
-    public static function csrfCheck()
+    public function csrfCheck()
     {
         $request = new Request();
         $check = $request->post('_token');
-        if (self::exists('_token') && self::get('_token') == $check) {
+        if ($this->exists('_token') && $this->get('_token') == $check) {
             return true;
         }
         Application::$app->response->redirect('errors/403');

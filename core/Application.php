@@ -9,6 +9,7 @@
 
 namespace app\core;
 
+use app\models\Users;
 use app\core\database\Database;
 
 class Application
@@ -31,9 +32,11 @@ class Application
     public Response $response;
     public ?Controller $controller = null;
     public View $view;
+    public ?Users $user;
 
     public function __construct($rootPath, array $config, $logger)
     {
+        $this->user = null;
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
         $this->logger = $logger;
@@ -51,8 +54,7 @@ class Application
 
     public static function isGuest()
     {
-        return 'User';
-        // return !self::$app->user;
+        return !self::$app->user;
     }
 
     public function run()

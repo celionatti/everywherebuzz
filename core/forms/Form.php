@@ -102,7 +102,8 @@ class Form
 
     public static function csrfField()
     {
-        $token = Session::createCsrfToken();
+        $session = new Session();
+        $token = $session->createCsrfToken();
         $html = "<input type='hidden' value='{$token}' name='_token' />";
         return $html;
     }

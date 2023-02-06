@@ -9,7 +9,7 @@
 namespace app\core\middlewares;
 
 use app\core\Application;
-use app\core\exception\ForbiddenException;
+use app\core\exceptions\ForbiddenException;
 
 /**
  * Class BaseMiddleware

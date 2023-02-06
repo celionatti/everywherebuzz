@@ -3,24 +3,23 @@
 
 /** @var $this \app\core\View */
 
+use app\core\forms\Form;
+
 $this->title = "EverywhereBuzz | Create an Account";
 
 ?>
 
-<form action="create.html" method="post" class="admin-form auth-form">
+<form action="" method="post" class="admin-form auth-form">
+    <?= Form::csrfField(); ?>
     <h1 class="center form-title">Sign Up</h1>
 
-    <div class="input-group avatar-input-group center">
-        <input type="file" name="avatar" id="avatar-input" class="hide avatar-input">
-        <button type="button" class="change-avatar-btn">
-            <span>Change</span>
-        </button>
-        <label for="avatar-input">Profile Image Optional</label>
-    </div>
-
     <div class="input-group">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username" class="input-control">
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" id="surname" class="input-control">
+    </div>
+    <div class="input-group">
+        <label for="lastname">LastName</label>
+        <input type="text" name="lastname" id="lastname" class="input-control">
     </div>
     <div class="input-group">
         <label for="email">E-Mail</label>
@@ -31,8 +30,8 @@ $this->title = "EverywhereBuzz | Create an Account";
         <input type="password" name="password" id="password" class="input-control">
     </div>
     <div class="input-group">
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" name="confirm-password" id="confirm-password" class="input-control">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" class="input-control">
     </div>
 
     <div class="input-group">

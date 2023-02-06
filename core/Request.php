@@ -126,6 +126,11 @@ class Request
         return $dirty;
     }
 
+    public function esc($str)
+    {
+        return htmlspecialchars($str);
+    }
+
     /**
      * @param $params
      * @return self

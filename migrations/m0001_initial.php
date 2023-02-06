@@ -17,7 +17,7 @@ class m0001_initial
         `id` bigint(11) NOT NULL AUTO_INCREMENT,
         `uid` varchar(300) NOT NULL,
         `username` varchar(300) DEFAULT NULL,
-        `firstname` varchar(300) NOT NULL,
+        `surname` varchar(300) NOT NULL,
         `lastname` varchar(300) NOT NULL,
         `email` varchar(300) NOT NULL,
         `password` varchar(300) NOT NULL,

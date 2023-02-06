@@ -15,5 +15,12 @@ use app\core\database\DbModel;
 
 class Model extends DbModel
 {
-    
+    public function loadData($data)
+    {
+        foreach ($data as $key => $value) {
+            if (property_exists($this, $key)) {
+                $this->{$key} = $value;
+            }
+        }
+    }
 }

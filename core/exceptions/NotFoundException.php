@@ -6,13 +6,13 @@
  * Time: 01:52 PM
  */
 
-namespace app\core\exception;
+namespace app\core\exceptions;
 
 
 /**
  * Class ForbiddenException
  * @author celio natti <celionatti@gmail.com>
- * @package app\core\exception
+ * @package app\core\exceptions
  */
 
 class NotFoundException extends \Exception

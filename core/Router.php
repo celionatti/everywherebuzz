@@ -9,7 +9,7 @@
 
 namespace app\core;
 
-use app\core\exception\NotFoundException;
+use app\core\exceptions\NotFoundException;
 
  class Router
  {
